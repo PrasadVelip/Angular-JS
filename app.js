@@ -7,7 +7,7 @@ app.controller('weatherCtrl', ['$scope', 'weatherService', function($scope, weat
     }); 
   }
   
- //fetchWeather('84105');
+
   
   $scope.findWeather = function(selected_city) {
     $scope.place = '';
@@ -24,7 +24,7 @@ app.factory('weatherService', ['$http', '$q', function ($http, $q){
         deferred.resolve(data.query.results.channel);
       })
       .error(function(err){
-        console.log('Error retrieving markets');
+        console.log('Error retrieving Weather');
         deferred.reject(err);
       });
     return deferred.promise;

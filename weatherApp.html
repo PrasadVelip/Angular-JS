@@ -4,10 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <title>Weather App Using Angular JS</title>
-  <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
   <script data-require="bootstrap@*" data-semver="3.1.1" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <!-- <link rel="stylesheet" href="style.css" /> -->
-  <script data-require="angular.js@1.2.x" src="https://code.angularjs.org/1.2.16/angular.js" data-semver="1.2.16"></script>
+   <script data-require="angular.js@1.2.x" src="https://code.angularjs.org/1.2.16/angular.js" data-semver="1.2.16"></script>
   
   <script src="app.js"></script>
 </head>
@@ -23,7 +22,7 @@
             <select ng-model="selected_city" class='form-control'>
               <option ng-repeat="x in city"> {{x}}</option>
             </select>
-            <!-- <input class="form-control" type="text" ng-bind="selected_city" placeholder=" {{ selected_city}}" /> -->
+            
           </div>
           <input ng-show="selected_city" class="btn btn-primary" type="submit" value="Show weather of {{selected_city}}" ng-click="findWeather(selected_city)" />
         </form>
@@ -36,7 +35,7 @@
            <h4 ng-show="place.item.condition.text">
             <img class="img-thumbnail forecast-img" src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif" /><br>
             <span class="text-muted">Current Condition :</span> {{ place.item.condition.text }} <br>
-            <span class="text-muted">Temperature:</span>{{ place.item.condition.temp }} <br>
+            <span class="text-muted">Temperature:</span>{{ place.item.condition.temp }} F<br>
             <span class="text-muted">Fahrenheit Humidity:</span>  {{ place.atmosphere.pressure }} </h4>
       </div>
     </div>
